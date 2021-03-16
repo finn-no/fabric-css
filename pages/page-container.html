@@ -1,7 +1,55 @@
 <html lang="en">
-  <%- include('head.html'); -%>
+  <head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  
+  
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/prism.min.js"
+    integrity="sha512-YBk7HhgDZvBxmtOfUdvX0z8IH2d10Hp3aEygaMNhtF8fSOvBZ16D/1bXZTJV6ndk/L/DlXxYStP8jrF77v2MIg=="
+    crossorigin="anonymous"
+  ></script>
+
+  <title>Fabric CSS</title>
+
+  <style>
+    body {
+      display: grid;
+      grid-template-columns: 300px 1fr;
+      height: 100vh;
+    }
+
+    main {
+      width: 980px;
+      padding: 40px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  </style>
+<script type="module" crossorigin src="/finn/fabric-css/assets/page-container.0c7a4a38.js"></script>
+  <link rel="modulepreload" href="/finn/fabric-css/assets/syntax-highlight.1f403cc5.js">
+  <link rel="modulepreload" href="/finn/fabric-css/assets/vendor.88f48572.js">
+  <link rel="stylesheet" href="/finn/fabric-css/assets/syntax-highlight.3902840e.css">
+</head>
   <body>
-    <%- include('nav.html'); -%>
+    <nav class="bg-bluegray-100 px-32 py-16 grid content-start gap-8">
+  <h1 class="text-lg">Fabric CSS</h1>
+
+  <h2 class="text-16 mb-0 mt-16">Guide</h2>
+  <a class="text-14" href="/finn/fabric-css/pages/introduction.html">Introduction</a>
+  <a class="text-14" href="/finn/fabric-css/pages/getting-started.html">Getting started</a>
+
+  <h2 class="text-16 mb-0 mt-16">Core</h2>
+  <a class="text-14" href="/finn/fabric-css/pages/typography.html">Typography</a>
+
+  <h2 class="text-16 mb-0 mt-16">Layout</h2>
+  <a class="text-14" href="/finn/fabric-css/pages/page-container.html">Page-container</a>
+
+  <h2 class="text-16 mb-0 mt-16">Forms</h2>
+  <a class="text-14" href="/finn/fabric-css/pages/buttons.html">Buttons</a>
+  <a class="text-14" href="/finn/fabric-css/pages/form-elements.html">Form elements</a>
+</nav>
 
     <main>
       <h1>Page-container</h1>
