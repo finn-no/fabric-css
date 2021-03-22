@@ -1,0 +1,91 @@
+<html lang="en">
+  <%- include('head.html'); -%>
+  <body>
+    <%- include('nav.html'); -%>
+    <style>
+      /* example */
+      .examplegrd .grid {
+        list-style-type: none;
+        counter-reset: css-counter 0;
+        outline: 1px dashed #bbb;
+      }
+
+      .examplegrd .grid__unit,
+      .examplegrd .grid > div {
+        counter-increment: css-counter 1;
+        outline: 1px dashed #aaa;
+        padding: 16px;
+        outline-offset: -2px;
+      }
+
+      .examplegrd .grid__unit:before,
+      .examplegrd .grid > div:before {
+        content: counter(css-counter);
+        padding: 16px;
+      }
+    </style>
+    <main>
+      <h1>Grid</h1>
+      <div class="mb-24">
+        <div class="mb-48">
+          <h2 class="h4 mt-24 text-yellow-600">Warning</h2>
+          <p class="mt-8 border-l-4 pl-16 border-yellow-600">
+            The Troika version of .grid has been replaced by a fully display:grid verion using the same class,
+            but is temporarely kept backwards compatible with a few exeptions (see warning below). The child
+            unit class (grid__unit) is no longer needed in Fabric.
+          </p>
+          <div class="mt-32 grid gap-16 grid-cols-1">
+            <div class="border-l-4 pl-16 border-yellow-600">
+              <h3 class="h4 text-yellow-600">Troika markup example</h3>
+              <syntax-highlight class="my-8">
+                <div class="grid grid--cols1to2">
+                  <div class="grid__unit">...</div>
+                  <div class="grid__unit">...</div>
+                </div>
+              </syntax-highlight>
+            </div>
+            <div class="border-l-4 pl-16 border-green-600">
+              <h3 class="h4 text-green-600">Fabric equivalent</h3>
+              <syntax-highlight class="my-8">
+                <div class="grid grid-cols-1 md:grid-cols-2">
+                  <div>...</div>
+                  <div>...</div>
+                </div>
+              </syntax-highlight>
+            </div>
+            <p>
+              <span class="font-bold">Note!</span>
+              Use what ever elements that makes most sense semanticly, they do not have to be divs like the
+              example.
+            </p>
+          </div>
+        </div>
+
+        <h2 class="h4 mt-24 text-yellow-600">Warning</h2>
+        <p class="mt-8 border-l-4 pl-16 border-yellow-600">
+          Setting size directly on a grid child is no longer supported. This should not be done with grid,
+          which is strictly a display:grid utillity in Fabric.
+        </p>
+        <div class="mt-32 border-l-4 pl-16 border-yellow-600">
+          <h3 class="h4 text-yellow-600">Troika markup example</h3>
+          <syntax-highlight class="my-8">
+            <div class="grid">
+              <div class="grid__unit u-r-size1of3">...</div>
+              <div class="grid__unit u-r-size1of3">...</div>
+            </div>
+          </syntax-highlight>
+        </div>
+        <div class="border-l-4 pl-16 border-green-600">
+          <h3 class="h4 text-green-600">Fabric equivalent</h3>
+          <syntax-highlight class="my-8">
+            <div class="flex">
+              <div class="md:w-1/3">...</div>
+              <div class="md:w-2/3">...</div>
+            </div>
+          </syntax-highlight>
+        </div>
+      </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.0/dist/alpine.min.js" defer></script>
+  </body>
+</html>
